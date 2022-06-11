@@ -1,0 +1,251 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[super]{nth}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\usepackage{color}
+\usepackage{colortbl}
+\usetikzlibrary{shapes,backgrounds}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{booktabs} 
+\usepackage{adjustbox}
+\usepackage{float}
+\pagestyle{fancy}
+\newtheorem*{rfd*}{Definition of Relative Frequency Density}
+
+
+
+\begin{document}
+\lhead{Ryan Allison}
+\chead{}
+\rhead{June $10$, $2016$}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{\underline{Geographic Information Systems Certificate Portfolio:}}
+\vspace{1pc}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\item Map Example Computing Flooded Areas From Hurricane Katrina
+
+	\begin{itemize}
+	\item This is a map showcases the flooded areas of Hurricane Katrina in the Hancock, Harrison, and Jackson Counties along The Gulf of Mexico.   
+	\item There was a lot behind this project. I took a raster elevation image of the area. I then used symbology tab to symbolize the elevation using a yellow to green to dark blue ramp.  
+	\item I added counties, island layers, and water layers of rivers and the ocean.
+	\item I then calculated the flooded land using Spatial Analyst. Any land within the storm surge of 15 ft was considered flooded. 
+	\item I then used the reclassify tool to classify the different types of land (e.g. open water, barren land, developed, forest, etc).
+	\item I then isolated the flooded areas and then ran some statistics on the percentage of land was flooded for the various types of land and produced a bar graph displaying this information as well. 
+
+
+
+		
+	\end{itemize}		
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=175mm]{3c_map.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+	
+\newpage		
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item Map Example Where To Send Relieve From Hurricane Katrina
+
+	\begin{itemize}
+	\item This is a map was used to find areas to send relieve efforts due to Hurricane Katrina in the Hancock, Harrison, and Jackson Counties along The Gulf of Mexico.   
+	\item This map used a very similar process to the map in the previous example.
+	\item I added counties, island layers, and water layers of rivers and the ocean.
+	\item I then calculated the flooded land using Spatial Analyst. Any land within the storm surge of 15 ft was considered flooded. 
+	\item I then symbolized infrastructure, roads, highways, cities, and facilities appropriately. 
+	\item From this map we are now able to deduce where to send relieve effort (flooded infrastructure) and know where to send them to safety (non-flooded infrastructure). 
+
+
+
+		
+	\end{itemize}		
+		
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=175mm]{coast3.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+	
+\newpage		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item Map Example Of Dissolved Property Parcels For Zoning
+	\begin{itemize}
+	\item This map showcases my ability to dissolve property parcels to create a zoning map.
+	\item I was provided parcel coverage layer. I selected parcels within the database and converted them for commercial use. These properties are showcased/symbolized in red.
+	\item I then added a new field to the parcels attribute table which includes aggregate-level zoning codes using the Field Calculator.
+	\item I then dissolved the parcel's features using the Dissolve function, using my new field `ZONE' as the dissolve field, and adding the SUM statistics for the three tax fields that were provided. 
+	\item The next steps in this process were to use Unique Values for symbolizing the ZONE values: Lilac Dust for Development, Rose Quartz for Commercial, Gray 30\% for Industrial, Yucca Yellow for Residential, and Blue Gray for Special.		
+	\end{itemize}		
+		
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=135mm]{Ryan_Allison_3e_map.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+	
+\newpage	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item 3D Model of Pittsburgh
+	\begin{itemize}
+	\item In this map I imported a historical building, non-historical building, rivers, a topology, and history sites of Pittsburgh. 
+	\item The projection was changed to NAD 1983 State Plane Pennsylvania South FIPS 3702 Feet projection. 
+	\item This was just an introduction assignment to the 3D builder and not much analysis was actually done except for symbology.
+	\item Historical buildings have zero transparency. 
+	\item Non-historical buildings have 60\% transparency. 
+	\item Both building feature classes were draped with an offset of 10.
+	\item Rivers were draped with an offset of 5. 
+
+	\end{itemize}		
+		
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=175mm]{assignment10-1.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+
+\newpage	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item 3D Land Analysis - Phipps Conservatory and CMU Sites.
+	\begin{itemize}
+	\item This shows three land analyses of the Phipps Conservatory and Carnegie Mellon University sites in Pittsburg. 
+	\item The left image is a slope analysis of the land near the conservatory. 
+	\item The middle image is a couple line of sight analyses. The green on the line of sight is shallow slope, where red indicates a steeper slope of the line of sight. 
+	\item The right image is topography analysis. Based on this analysis, the right point of the line is about 900 ft, and the left point is about 0 ft of elevation. So, if you were to walk this path, your change in elevation would be about 900 ft. 
+	\end{itemize}		
+		
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=165mm]{Assignment10-2.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+
+\newpage	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item Map Example Of Urban Population Growth For Denver and Jefferson Counties in Colorado
+	\begin{itemize}
+	\item In this map, I built a study area for two rapidly growing counties in Colorado: Denver and Jefferson counties. 
+	\item I created one feature class by combining urban areas for both Jefferson and Denver counties.
+	\item I created and added a point layer showing populations of cities in the study urban area only. Within the layer, I added and calculated a new field for population change between 2000 and 2007. These data points have been symbolized using graduated points with a quantile classification using 5 classes and are in mars red.
+	\item I created a streets layer by combining Colorado county streets that were clipped to the study urban area.
+	\item The water layer was added by combing water features that intersect the study urban area, and are symbolized using a blue hue.
+	\item Counties and cities have been labeled using halos. In addition, the major road of Wadsworth was selected and displayed in mars red.  The counties have a bold black outline to differentiate them from the boundary of the study area. 
+
+
+
+	\end{itemize}		
+		
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=165mm]{Ryan_Allison_3f_map.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+	
+\newpage	
+
+\item Thematic Map Example Of Senior Population For Alabama Counties
+
+
+
+	\begin{itemize}
+	\item This is a thematic map of senior population for the counties of Alabama. 
+	\item This map shows a particular symbology that I believe is clean and aesthetically pleasing.  
+	\item I used a fixed percentage for my symbology intervals, which was a part of the 
+assignment. 
+	\item I used a reverse scale of a blue to white scale.  The white being the less populated counties of seniors.
+	\item What I deduce from this map is that seniors are prefer to be out in rural areas over the major cities of Huntsville, Birmingham, Montgomery, and Mobile. (This is hard to read hard to deduce from this map as cities are not a layer)
+	\item I labeled the counties with a white halo for easy reading. 
+	\item The north arrow showcased here is a nice one and of simple design.
+	\item The scale is towards the bottom of the map and is using a 100-mile scale. There?s also the author, date, and source in the lower left.
+		
+	\end{itemize}		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=120mm]{3b_map.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+	
+\newpage		
+
+
+
+
+
+\item Map Example Of Oregon Counties 2010
+	\begin{itemize}
+	\item The task for this map was under the `map design' module from a previous course. We were to get acclimated to the process of designing a map. 
+	\item This map shows Oregon counties for the year 2010. I'm from Oregon, so I liked that part about this map, and being from there I new that I wanted to make that layer some type of green. 
+	\item I used `landscape' for my layout view due to the projection and the rectangular shape of Oregon. I believe it fills the page better and is a bit more aesthetically pleasing this way.
+	\item I labeled the counties with a white halo for easy reading. 
+	\item The north arrow showcased here is a nice one, but it's usually not the one I have been traditionally using. I'm not sure why I chose this one, but I like it.
+	\item Scale is towards the bottom of the map and is using a 250-mile scale. There's also the author, date, and source in the lower left.
+	
+	\end{itemize}		
+			
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=165mm]{3a_map.jpg}
+				\caption{}
+				\label{fig:method}
+				\end{figure}
+	
+
+	\end{enumerate}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
