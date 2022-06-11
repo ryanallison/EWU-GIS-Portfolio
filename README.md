@@ -1,2 +1,2 @@
-# EWU-GIS-Portfolio
-Some projects from my EWU GIS certificate
+# EWU GIS Portfolio
+A pdf document of projects from my EWU GIS certificate
